@@ -6,13 +6,14 @@ $class: "brand";
 
 .#{$class} {
   float: left;
-  width: 100%;
+  width: auto;
   .#{$class}-box {
     float: left;
     width: 100%;
     .#{$class}-item {
       float: left;
-      width: 240px;
+      height: 64px;
+      width: auto;
     }
   }
 }

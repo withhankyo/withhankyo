@@ -16,3 +16,17 @@
 // -------------------------------------------------------------
 .flex-h-center  { @include flex-h-center; }
 .flex-v-center  { @include flex-v-center; }
+
+
+@mixin autofill {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active,
+  &:-webkit-autofill::first-line {
+    @include font-size-m;
+    -webkit-text-fill-color: $gray-600;
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+    font-family: $sans !important;
+  }
+}

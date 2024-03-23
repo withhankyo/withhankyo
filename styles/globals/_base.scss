@@ -31,6 +31,11 @@
   color: $gray-000;
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 html,
 body {
   @include font-size-m;
@@ -155,6 +160,62 @@ span {
   box-decoration-break: clone;
   margin: 0;
   vertical-align: bottom;
+}
+
+form {
+  border: 0;
+  display: block;
+  float: left;
+  margin: 0;
+  width: 100%;
+  fieldset {
+    border: 0;
+    display: block;
+    float: left;
+    margin: 0;
+    width: 100%;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="url"],
+  textarea {
+    @include autofill;
+    float: left;
+    margin: 0;
+    width: 100%;
+  }
+  textarea {
+    resize: none;
+  }
+  input[type="file"] {
+    float: left;
+    margin: 0;
+    width: 100%;
+  }
+  select {
+    @include autofill;
+    float: left;
+    margin: 0;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
 }
 
 // Mobile

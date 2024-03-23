@@ -27,11 +27,13 @@ export default function Index() {
         <p>
           The upcoming launch of hankyō is in early summer 2024. We invite you to join our invitation list today for early access.
         </p>
-        <p className="font-size-m">By the way, &lsquo;hankyō&rsquo; (反響) means &lsquo;echo&rsquo; or &lsquo;resonance&rsquo; in Japanese.</p>
       </div>
 
       <FormComponent />
 
+      <div className="page writer">
+        <p className="font-size-m">By the way, &lsquo;hankyō&rsquo; (反響) means &lsquo;echo&rsquo; or &lsquo;resonance&rsquo; in Japanese.</p>
+      </div>
     </Layout>
   );
 }

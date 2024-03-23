@@ -7,14 +7,14 @@
 import React from "react"
 
 // Import SVGs
-import Brand from "../svgs/brand";
+import BrandIcon from "../svgs/brand-icon";
 
 export default function BrandComponent() {
   return (
     <div className="brand">
       <div className="brand-box">
         <div className="brand-item">
-          <Brand />
+          <BrandIcon />
         </div>
       </div>
     </div>

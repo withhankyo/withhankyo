@@ -1,0 +1,230 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File: Form
+// -------------------------------------------------------------
+
+$class: "form";
+
+$border-color: $gray-100;
+$border-focus: $blue-500;
+$border-error-color: $red-500;
+
+.#{$class} {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(16 24 32 / .05);
+  float: left;
+  margin: 64px 0;
+  padding: 48px 32px;
+  width: 50%;
+  .#{$class}-box {
+    border: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .#{$class}-header {
+      float: left;
+      padding: 8px 8px 24px;
+      width: 100%;
+    }
+    .#{$class}-body {
+      float: left;
+      width: 100%;
+    }
+    .#{$class}-footer {
+      float: left;
+      padding: 16px 0 0;
+      width: 100%;
+    }
+    .#{$class}-row {
+      float: left;
+      width: 100%;
+    }
+    .#{$class}-item {
+      float: left;
+      width: 100%;
+      &.#{$class}-item-half {
+        width: 50%;
+      }
+    }
+    .#{$class}-field {
+      float: left;
+      padding: 0 16px 16px;
+      width: 100%;
+    }
+  }
+  .#{$class}-input,
+  .#{$class}-select {
+    float: left;
+    width: 100%;
+  }
+  .#{$class}-input {
+    input[type="email"],
+    input[type="text"] {
+      @include font-size-s;
+      border: 1px dotted $border-color;
+      border-radius: 4px;
+      color: $text-gray-secondary;
+      padding: 11px 15px;
+      &:focus {
+        border: 1px solid $border-focus;
+        outline: 2px solid $border-focus;
+      }
+    }
+  }
+  .#{$class}-select {
+    select {
+      @include font-size-s;
+      background-image: url("../../svgs/icons/unchecked.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+      border: 1px dotted $border-color;
+      border-radius: 4px;
+      color: $text-gray-secondary;
+      padding: 11px 15px;
+      &:focus {
+        border: 1px solid $border-focus;
+        outline: 2px solid $border-focus;
+      }
+    }
+  }
+  .#{$class}-checkbox {
+    @include hover-animation(.25s);
+    color: $text-gray-secondary;
+    cursor: pointer;
+    float: left;
+    margin: 8px 0 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    .#{$class}-checkbox-label {
+      @include font-size-xs;
+      color: $text-gray-secondary;
+      cursor: pointer;
+      float: left;
+      line-height: 24px;
+      margin: 0 0 0 12px;
+      padding: 0;
+      width: auto;
+    }
+    span.checkmark {
+      background-color: $gray-100;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      cursor: pointer;
+      float: left;
+      margin: 2px 0;
+      width: 20px;
+      height: 20px;
+    }
+    /* Checkbox checked state */
+    span.checkmark {
+      // background-color: $gray-700;
+      background-image: url("../../svgs/icons/unchecked.svg");
+      background-size: 20px 20px;
+    }
+    input[type="checkbox"]:checked + span.checkmark {
+      // background-color: $gray-100;
+      background-image: url("../../svgs/icons/checked.svg");
+      background-size: 20px 20px;
+    }
+  }
+  .#{$class}-error {
+    @include font-size-xxs;
+    color: $red-500;
+    float: left;
+    margin: 4px 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .#{$class}-label {
+    @include font-size-xxs;
+    color: $text-gray-primary;
+    float: left;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    padding: 4px 16px;
+    text-transform: uppercase;
+    width: 100%;
+    &.required::after {
+      content: " *";
+      vertical-align: top;
+    }
+  }
+  .#{$class}-submit {
+    float: left;
+    padding: 8px;
+    width: 100%;
+    button[type="submit"] {
+      // @include button-style-black;
+      @include font-size-xs;
+      @include hover-animation(.25s);
+      box-shadow: 0 0 2px rgb(16 24 32 / .05);
+      border-radius: 4px;
+      cursor: pointer;
+      float: left;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 24px;
+      padding: 16px 16px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      word-break: break-word;
+      width: 100%;
+    }
+  }
+}
+
+// Mobile
+// -------------------------------------------------------------
+@media #{$mobile} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-row {
+      }
+      .#{$class}-item {
+      }
+    }
+  }
+}

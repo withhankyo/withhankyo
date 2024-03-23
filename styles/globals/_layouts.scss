@@ -15,25 +15,19 @@
 }
 
 .header {
+  padding: 32px;
 }
 
 .main {
-  min-height: calc(100vh - 96px);
-  padding: 160px 16px;
+  // min-height: calc(100vh - 96px);
+  padding: 32px;
 }
 
 .footer {
-  padding: 16px;
+  padding: 32px;
 }
 
 // Mobile
 // -------------------------------------------------------------
 @media #{$mobile} {
-  .main {
-    min-height: calc(100vh - 128px);
-    padding: 80px 16px;
-  }
-  .footer {
-    padding: 16px;
-  }
 }

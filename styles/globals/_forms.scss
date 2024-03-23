@@ -1,0 +1,320 @@
+/* -------------------------------------------------------------
+Globals: Form
+------------------------------------------------------------- */
+
+/* Resources:
+https://www.w3schools.com/html/html_form_input_types.asp
+------------------------------------------------------------- */
+
+@use "../../load_variables" as *;
+@use "../../load_mixins" as *;
+
+$class: "form";
+$border-color: $gray-100;
+$border-focus: $blue-500;
+$border-error-color: $red-500;
+
+.#{$class} {
+  @include font-size-m;
+  padding: 16px;
+  .#{$class}-wrap {
+    float: left;
+    width: 100%;
+  }
+  .#{$class}-box {
+    @include box-shadow;
+    @include rounded-border-8;
+    background-color: $white;
+    padding: 24px;
+    .#{$class}-header {
+      float: left;
+      padding: 8px 8px 24px;
+      width: 100%;
+    }
+    .#{$class}-body {
+      float: left;
+      width: 100%;
+    }
+    .#{$class}-footer {
+      float: left;
+      padding: 16px 0 0;
+      width: 100%;
+    }
+    .#{$class}-row {
+      float: left;
+      width: 100%;
+    }
+    .#{$class}-item {
+      float: left;
+      width: 100%;
+    }
+    .#{$class}-field {
+      float: left;
+      padding: 0 8px 16px;
+      width: 100%;
+    }
+    .#{$class}-input,
+    .#{$class}-textarea,
+    .#{$class}-file,
+    .#{$class}-select {
+      float: left;
+      width: 100%;
+    }
+    .#{$class}-input,
+    .#{$class}-textarea {
+      input[type="email"],
+      input[type="password"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="url"],
+      textarea {
+        @include font-size-m;
+        @include rounded-border-4;
+        border: 1px dotted $border-color;
+        color: $text-gray-secondary;
+        padding: 11px 15px;
+        &:focus {
+          border: 1px solid $border-focus;
+          outline: 2px solid $border-focus;
+        }
+      }
+    }
+    .#{$class}-textarea {
+      textarea {
+        min-height: 120px;
+      }
+    }
+    .#{$class}-file {
+      input[type="file"] {
+        display: none;
+        visibility: hidden;
+      }
+      .#{$class}-file-upload {
+        @include button-style-light-blue;
+        @include rounded-border;
+        cursor: pointer;
+        float: left;
+        font-size: 12px;
+        font-weight: $bold;
+        line-height: 24px;
+        height: 100%;
+        padding: 8px 0;
+        text-transform: uppercase;
+        width: 100%;
+        span {
+          @include hover-animation(.25s);
+          @include flex-horizontal-center;
+          float: left;
+          // margin: 6px 0;
+          width: 100%;
+          i {
+            height: 16px;
+            margin: 8px 0 4px;
+            svg {
+              path {
+                @include hover-animation(.25s);
+              }
+            }
+          }
+        }
+      }
+    }
+    .#{$class}-select {
+      select {
+        @include font-size-m;
+        @include rounded-border-4;
+        background-image: url("down_select.svg");
+        background-position: right;
+        background-repeat: no-repeat;
+        border: 1px dotted $border-color;
+        color: $text-gray-secondary;
+        padding: 11px 15px;
+        &:focus {
+          border: 1px solid $border-focus;
+          outline: 2px solid $border-focus;
+        }
+      }
+    }
+    .#{$class}-radio,
+    .#{$class}-checkbox {
+      @include hover-animation(.25s);
+      @include rounded-border-4;
+      border: 1px dotted $border-color;
+      color: $text-gray-secondary;
+      cursor: pointer;
+      float: left;
+      margin: 0;
+      padding: 11px 15px;
+      position: relative;
+      width: 100%;
+      &:hover {
+        background-color: $gray-000;
+      }
+      .#{$class}-radio-label,
+      .#{$class}-checkbox-label {
+        @include font-size-s;
+        color: $text-gray-secondary;
+        cursor: pointer;
+        float: left;
+        line-height: 24px;
+        margin: 0 0 0 8px;
+        padding: 0;
+        width: auto;
+      }
+      span.radiomark,
+      span.checkmark {
+        @include rounded-border-4;
+        background-color: $gray-100;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        cursor: pointer;
+        float: left;
+        margin: 2px 0;
+        width: 20px;
+        height: 20px;
+      }
+      /* Radio checked state */
+      span.radiomark {
+        background-image: url("icons/radio_off.svg");
+      }
+      input[type="radio"]:checked + span.radiomark {
+        background-image: url("icons/radio_on.svg");
+      }
+      /* Checkbox checked state */
+      span.checkmark {
+        @include rounded-border-4;
+        background-image: url("icons/unchecked.svg");
+      }
+      input[type="checkbox"]:checked + span.checkmark {
+        background-image: url("icons/checked.svg");
+      }
+    }
+    .#{$class}-submit,
+    .#{$class}-cancel {
+      float: left;
+      padding: 8px;
+      width: 100%;
+      button[type="submit"],
+      input[type="submit"],
+      .#{$class}-cancel-button {
+        @include button-size-l;
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .#{$class}-submit {
+      button[type="submit"],
+      input[type="submit"] {
+        @include button-style-black;
+      }
+    }
+    .#{$class}-cancel {
+      .#{$class}-cancel-button {
+        @include button-style-gray;
+      }
+    }
+  }
+  .#{$class}-legend {
+    @include font-size-xl;
+    color: $text-gray-primary;
+    float: left;
+    font-weight: $bold;
+    padding: 0;
+    width: 100%;
+  }
+  .#{$class}-description {
+    @include font-size-m;
+    color: $text-gray-secondary;
+    float: left;
+    margin: 4px 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .#{$class}-label {
+    @include font-size-xs;
+    color: $text-gray-primary;
+    float: left;
+    font-weight: $bold;
+    letter-spacing: 0.025em;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    width: 100%;
+    &.required::after {
+      content: " *";
+      vertical-align: top;
+    }
+    .#{$class}-label-link {
+      @include link($sz: 12px, $ht: 16px);
+      @include link-style($cl: $gray-500, $cl-h: $gray-950);
+      float: right;
+      margin: 0 0 0 12px;
+      text-transform: none;
+    }
+  }
+  .#{$class}-label-reference {
+    @include font-size-xxs;
+    color: $text-gray-tertiary;
+    float: left;
+    // font-family: $mono;
+    font-weight: $light;
+    margin: 0;
+    padding: 0 8px 4px;
+    text-transform: none;
+    width: 100%;
+  }
+  .#{$class}-reference {
+    @include font-size-xxs;
+    color: $text-gray-tertiary;
+    float: left;
+    // font-family: $mono;
+    font-weight: $light;
+    margin: 0;
+    padding: 4px 0 0;
+    width: 100%;
+  }
+  .#{$class}-nav {
+    float: left;
+    width: 100%;
+    .#{$class}-nav-box {
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: 8px;
+      width: 100%;
+      .#{$class}-nav-item {
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        .#{$class}-nav-link {
+          @include link($sz: 14px, $ht: 22px);
+          @include link-style($cl: $gray-500, $cl-h: $gray-950);
+        }
+      }
+    }
+  }
+  .#{$class}-error {
+    border: 1px solid $border-error-color !important;
+    outline: 2px solid $border-error-color !important;
+    &:focus {
+      border: 1px solid $border-error-color !important;
+      outline: 2px solid $border-error-color !important;
+    }
+  }
+}
+
+/* -------------------------------------------------------------
+Breakpoints
+------------------------------------------------------------- */
+
+/* Mobile
+------------------------------------------------------------- */
+@media #{$mobile} {
+}
+
+/* Tablet
+------------------------------------------------------------- */
+@media #{$tablet} {
+}
