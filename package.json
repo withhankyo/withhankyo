@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@botpoison/browser": "^0.1.30",
+    "@formspark/use-formspark": "^0.1.39",
     "caniuse-lite": "^1.0.30001551",
     "next": "latest",
     "next-sitemap": "^4.2.3",

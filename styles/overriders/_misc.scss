@@ -43,12 +43,6 @@
     padding: 0 !important;
     float: right;
   }
-  .ml-form-embedWrapper,
-  .embedForm {
-    background-color: red !important;
-    width: 512px !important;
-    padding: 0 !important;
-  }
 
   form {
     float: left;
@@ -58,10 +52,21 @@
       width: 1024px;
     }
   }
-
+  .ml-subscribe-form {
+    background-color: red;
+    float: left;
+    width: 100%;
+  }
+  .ml-form-embedWrapper {
+    background-color: blue;
+    float: left !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
   .ml-form-embedBody,
   .ml-form-embedBodyHorizontal,
   .row-form {
     padding: 0 !important;
   }
 }
+

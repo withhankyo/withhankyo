@@ -5,6 +5,7 @@
 
 // Import built-in Next.js components and libraries
 import Head from "next/head";
+import Script from 'next/script'
 
 export default function MetaComponent() {
 
@@ -54,6 +55,9 @@ export default function MetaComponent() {
 
       {/* Preloaders */}
       <link rel="dns-prefetch" href={meta.fonts} />
+
+      {/* BotPoison */}
+      <Script src="https://unpkg.com/@botpoison/browser" async />
     </Head>
   );
 }
