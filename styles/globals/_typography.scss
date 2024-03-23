@@ -85,7 +85,7 @@ abbr {
 code {
   @include header-size-xs;
   -webkit-box-decoration-break: clone;
-  background-color: $black-100;
+  background-color: $gray-100;
   box-decoration-break: clone;
   border-radius: 3px;
   line-height: inherit;

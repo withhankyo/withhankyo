@@ -3,9 +3,29 @@
 // -------------------------------------------------------------
 
 // Imports
-@import url("https://use.typekit.net/sch6dmk.css");
+// @import url("https://use.typekit.net/sch6dmk.css");
 
 // Adobe Fonts
-$mono: "Courier New", Courier, monospace !default;
-$sans: "aktiv-grotesk", "Segoe UI", Tahoma, Verdana, sans-serif !default;
+// $mono: "Courier New", Courier, monospace !default;
+// $sans: "aktiv-grotesk", "Segoe UI", Tahoma, Verdana, sans-serif !default;
+// $serif: Times, Georgia, serif !default;
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/GeistVariableVF.woff2") format("woff2 supports variations"),
+       url("/fonts/GeistVariableVF.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"),
+       url("/fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+$sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+$mono: "Geist Mono", monospace;
 $serif: Times, Georgia, serif !default;

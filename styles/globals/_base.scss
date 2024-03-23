@@ -22,20 +22,20 @@
 }
 
 ::-moz-selection {
-  background-color: $black-900;
-  color: $black-000;
+  background-color: $gray-950;
+  color: $gray-000;
 }
 
 ::selection {
-  background-color: $black-900;
-  color: $black-000;
+  background-color: $gray-950;
+  color: $gray-000;
 }
 
 html,
 body {
   @include font-size-m;
-  background-color: $black-000;
-  color: $black-900;
+  background-color: $gray-000;
+  color: $gray-950;
   font-display: swap;
   font-family: $sans;
   letter-spacing: .030em;
@@ -66,14 +66,14 @@ button,
 }
 
 a {
-  color: $black-900;
+  color: $gray-950;
   &:link,
   &:visited {
-    color: $black-900;
+    color: $gray-950;
   }
   &:hover,
   &:active {
-    color: $black-900;
+    color: $gray-950;
   }
 }
 
@@ -85,7 +85,7 @@ figure {
   width: 100%;
   figcaption {
     background-color: transparent;
-    color: $black-500;
+    color: $gray-500;
     display: block;
     font-size: 12px;
     font-weight: 500;

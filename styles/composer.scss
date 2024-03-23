@@ -13,8 +13,8 @@
 // 1) Variables
 // ------------------------------------------------------------
 @import "./variables/breakpoints";
+@import "./variables/colors";
 @import "./variables/fonts";
-@import "./variables/palettes";
 
 // 2) Mixins
 // ------------------------------------------------------------
@@ -46,7 +46,6 @@
 
 // 6) Overriders
 // ------------------------------------------------------------
-@import "./overriders/colours";
 @import "./overriders/cursors";
 @import "./overriders/devices";
 @import "./overriders/displays";
