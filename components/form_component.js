@@ -86,11 +86,11 @@ export default function FormComponent() {
   };
 
   return (
-    <form id="form" className="form" onSubmit={onSubmit}>
+    <form id="form" className="form" onSubmit={onSubmit} data-nosnippet>
       <fieldset className="form-box">
         <legend className="form-legend">Request early access</legend>
         <div className="form-row">
-          <div className="form-item form-item-half">
+          <div className="form-item">
             <label className="form-label required">Name</label>
             <div className="form-field">
               <div className="form-input">
@@ -100,7 +100,7 @@ export default function FormComponent() {
             </div>
           </div>
 
-          <div className="form-item form-item-half">
+          <div className="form-item">
             <label className="form-label required">Last Name</label>
             <div className="form-field">
               <div className="form-input">
@@ -164,9 +164,6 @@ export default function FormComponent() {
           </div>
         </div>
       </fieldset>
-      <p className="form-note" data-nosnippet>
-        We value your privacy and trust above all. The information you provide will solely be used to keep you informed about our roadmap updates and to notify you when hankyō is ready for onboarding. We stand firmly against clutter – your inbox will remain free from unsolicited advertising, and your details will never be sold to third-party partners. Your digital peace is our promise.
-      </p>
     </form>
   );
 }

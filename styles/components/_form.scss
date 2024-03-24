@@ -11,7 +11,7 @@ $class: "form";
   float: right;
   margin: 0 0 64px;
   padding: 48px 32px;
-  width: 47.5%;
+  width: 100%;
   .#{$class}-box {
     border: none;
     float: left;
@@ -207,14 +207,10 @@ $class: "form";
     float: right;
     margin: 64px 0;
     padding: 24px 8px 12px;
-    width: 100%;
     .#{$class}-box {
       .#{$class}-row {
       }
       .#{$class}-item {
-        &.#{$class}-item-half {
-          width: 100%;
-        }
       }
     }
   }

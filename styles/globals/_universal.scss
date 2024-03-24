@@ -22,6 +22,16 @@ $class: "universal";
     position: relative;
     width: 100%;
   }
+  .#{$class}-left {
+    float: left;
+    padding: 0 32px 0 0;
+    width: 50%;
+  }
+  .#{$class}-right {
+    float: right;
+    padding: 0 0 0 32px;
+    width: 50%;
+  }
 }
 
 // Media Query 959px
@@ -32,6 +42,14 @@ $class: "universal";
       max-width: 959px;
     }
     .#{$class}-row {
+    }
+    .#{$class}-left {
+      padding: 0;
+      width: 100%;
+    }
+    .#{$class}-right {
+      padding: 0;
+      width: 100%;
     }
   }
 }

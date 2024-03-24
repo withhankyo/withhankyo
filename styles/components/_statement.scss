@@ -1,11 +1,11 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Copyright
+// File: Statement
 // -------------------------------------------------------------
 
-$class: "copyright";
+$class: "statement";
 
 .#{$class} {
-  float: left;
+  float: right;
   .#{$class}-box {
     float: left;
     padding: 16px 0;

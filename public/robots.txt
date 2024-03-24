@@ -4,12 +4,22 @@ Allow: /
 
 # *
 User-agent: *
+Disallow: /thank-you
+Disallow: /thank-you/
 Disallow: /builders
+Disallow: /builders/*
 Disallow: /components
+Disallow: /components/*
+Disallow: /fonts
+Disallow: /fonts/*
 Disallow: /layouts
+Disallow: /layouts/*
 Disallow: /pages
+Disallow: /pages/*
 Disallow: /styles
+Disallow: /styles/*
 Disallow: /svgs
+Disallow: /svgs/*
 
 # Host
 Host: https://www.hankyo.co

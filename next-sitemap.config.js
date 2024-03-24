@@ -7,7 +7,7 @@ module.exports = {
   priority: 0.8,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: [],
+  exclude: ["/thank-you", "/thank-you/", "/builders", "/builders/*", "/components", "/components/*", "/fonts", "/fonts/*", "/layouts", "/layouts/*", "/pages", "/pages/*", "/styles", "/styles/*", "/svgs", "/svgs/*", "/_app", "/_document", "/_error", "/404", "/404/"],
   alternateRefs: [],
   // Default transformation function
   transform: async (config, path) => {
@@ -28,12 +28,22 @@ module.exports = {
       {
         userAgent: "*",
         disallow: [
+          "/thank-you",
+          "/thank-you/",
           "/builders",
+          "/builders/*",
           "/components",
+          "/components/*",
+          "/fonts",
+          "/fonts/*",
           "/layouts",
+          "/layouts/*",
           "/pages",
+          "/pages/*",
           "/styles",
+          "/styles/*",
           "/svgs",
+          "/svgs/*",
         ]
       }
     ]

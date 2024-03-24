@@ -10,9 +10,8 @@ import React, { useEffect } from "react"
 import FaviconComponent from "../components/favicon_component"
 import MetaComponent from "../components/meta_component";
 import BrandComponent from "../components/brand_component"
-import MenuComponent from "../components/menu_component"
-import SocialNetworksComponent from "../components/social_networks_component"
 import CopyrightComponent from "../components/copyright_component"
+import StatementComponent from "../components/statement_component"
 
 export default function Primary({ children }) {
   return (
@@ -43,6 +42,7 @@ export default function Primary({ children }) {
         <div className="universal-box">
           <div className="universal-row">
             <CopyrightComponent />
+            <StatementComponent />
           </div>
         </div>
       </footer>

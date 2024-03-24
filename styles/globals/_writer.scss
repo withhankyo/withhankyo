@@ -6,7 +6,7 @@ $class: "writer";
 
 .#{$class} {
   float: left;
-  width: 47.5%;
+  width: 100%;
   &.#{$class}-newspaper {
     column-count: 2;
   }
@@ -30,6 +30,10 @@ $class: "writer";
     @include font-size-s;
     justify-content:left;
     margin: 0 0 48px;
+    &.small {
+      @include font-size-xxs;
+      color: $gray-600;
+    }
     &:first-child {
       margin-top: 0;
     }

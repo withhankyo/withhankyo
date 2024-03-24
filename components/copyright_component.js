@@ -15,10 +15,10 @@ export default function CopyrightComponent() {
   }, [])
 
   return (
-    <div className="copyright">
+    <div className="copyright" data-nosnippet>
       <div className="copyright-box">
         <div className="copyright-item">
-          <p className="font-size-xxs">&copy; <span className="year"></span> Hankyō</p>
+          <p className="font-size-xxs">Hankyō &copy; <span className="year"></span></p>
         </div>
       </div>
     </div>
