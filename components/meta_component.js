@@ -10,8 +10,8 @@ export default function MetaComponent() {
 
   // Default meta data
   const meta = {
-    title: "Empower Your Projects with hankyō",
-    description: "hankyō is a Headless CMS that embraces minimalism and simplicity for an effortless content management and web development experience.",
+    title: "hankyō - Serene Solutions for Digital Content",
+    description: "Introducing hankyō, the new Headless CMS crafted for simplicity and serenity. Ideal for web designers, startups, and developers eager to streamline their content process. Register now for early access and start your journey towards seamless content management.",
     keywords: "headless, content, management, system, cms, minimal, simple",
     url: "https://www.hankyo.co/",
     image: "https://www.hankyo.co/images/opengraph/og.png",
@@ -32,7 +32,7 @@ export default function MetaComponent() {
       <title>{meta.title}</title>
       <meta name="description" content={meta.description} />
       <meta name="keywords" content={meta.keywords} />
-      <link rel="canonical" href={meta.url} />
+      {/* <link rel="canonical" href={meta.url} /> */}
 
       {/* Application */}
       <meta name="application-name" content={meta.application_name} />
