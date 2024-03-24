@@ -10,7 +10,7 @@ export default function MetaComponent() {
 
   // Default meta data
   const meta = {
-    title: "hankyō - Serene Solutions for Digital Content",
+    title: "hankyō - Serene Management for Digital Content",
     description: "Introducing hankyō, the new Headless CMS crafted for simplicity and serenity. Ideal for web designers, startups, and developers eager to streamline their content process. Register now for early access and start your journey towards seamless content management.",
     keywords: "headless, content, management, system, cms, minimal, simple",
     url: "https://www.hankyo.co/",
