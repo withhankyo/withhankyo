@@ -25,7 +25,6 @@ export default function Primary({ children }) {
         <div className="universal-box">
           <div className="universal-row">
             <BrandComponent />
-            <MenuComponent />
           </div>
         </div>
       </header>
@@ -43,10 +42,7 @@ export default function Primary({ children }) {
       <footer className="universal footer" id="footer">
         <div className="universal-box">
           <div className="universal-row">
-            <SocialNetworksComponent />
-            <div className="universal-row">
-              <CopyrightComponent />
-            </div>
+            <CopyrightComponent />
           </div>
         </div>
       </footer>

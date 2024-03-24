@@ -14,6 +14,11 @@ $class: "brand";
       float: left;
       height: 64px;
       width: auto;
+      .#{$class}-link {
+        @include link-default;
+        line-height: 64px;
+        height: 64px;
+      }
     }
   }
 }

@@ -4,18 +4,14 @@
 
 $class: "form";
 
-$border-color: $gray-100;
-$border-focus: $blue-500;
-$border-error-color: $red-500;
-
 .#{$class} {
   background-color: $white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(16 24 32 / .05);
-  float: left;
-  margin: 64px 0;
+  float: right;
+  margin: 0 0 64px;
   padding: 48px 32px;
-  width: 50%;
+  width: 47.5%;
   .#{$class}-box {
     border: none;
     float: left;
@@ -62,61 +58,62 @@ $border-error-color: $red-500;
     input[type="email"],
     input[type="text"] {
       @include font-size-s;
-      border: 1px dotted $border-color;
+      border: 1px solid $gray-200;
       border-radius: 4px;
-      color: $text-gray-secondary;
+      color: $gray-600;
       padding: 11px 15px;
+      outline: 2px solid $gray-200;
       &:focus {
-        border: 1px solid $border-focus;
-        outline: 2px solid $border-focus;
+        border: 1px solid $blue-500;
+        outline: 2px solid $blue-500;
       }
     }
   }
   .#{$class}-select {
     select {
       @include font-size-s;
-      background-image: url("../../svgs/icons/unchecked.svg");
+      background-image: url("../../svgs/icons/select-down.svg");
       background-position: right;
       background-repeat: no-repeat;
-      border: 1px dotted $border-color;
+      border: 1px solid $gray-200;
       border-radius: 4px;
-      color: $text-gray-secondary;
+      color: $gray-600;
       padding: 11px 15px;
+      outline: 2px solid $gray-200;
       &:focus {
-        border: 1px solid $border-focus;
-        outline: 2px solid $border-focus;
+        border: 1px solid $blue-500;
+        outline: 2px solid $blue-500;
       }
     }
   }
   .#{$class}-checkbox {
     @include hover-animation(.25s);
-    color: $text-gray-secondary;
+    @include font-size-xxs;
+    color: $gray-600;
     cursor: pointer;
     float: left;
+    line-height: 24px;
     margin: 8px 0 0;
     padding: 0;
     position: relative;
     width: 100%;
-    .#{$class}-checkbox-label {
-      @include font-size-xs;
-      color: $text-gray-secondary;
-      cursor: pointer;
-      float: left;
-      line-height: 24px;
-      margin: 0 0 0 12px;
-      padding: 0;
-      width: auto;
+    span.label {
+      @include hover-animation(.25s);
+      margin: 0 0 0 8px;
+      &:hover {
+        color: $gray-950;
+      }
     }
     span.checkmark {
       background-color: $gray-100;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: 10px;
+      border-radius: 3px;
       cursor: pointer;
       float: left;
-      margin: 2px 0;
-      width: 20px;
-      height: 20px;
+      margin: 4px 0;
+      width: 16px;
+      height: 16px;
     }
     /* Checkbox checked state */
     span.checkmark {
@@ -138,12 +135,20 @@ $border-error-color: $red-500;
     padding: 0;
     width: 100%;
   }
+  .#{$class}-legend {
+    @include font-size-m;
+    color: $text-gray-primary;
+    float: left;
+    font-weight: 600;
+    padding: 0 16px 16px;
+    width: 100%;
+  }
   .#{$class}-label {
     @include font-size-xxs;
     color: $text-gray-primary;
     float: left;
     font-weight: 600;
-    letter-spacing: 0.025em;
+    letter-spacing: .015em;
     padding: 4px 16px;
     text-transform: uppercase;
     width: 100%;
@@ -154,20 +159,19 @@ $border-error-color: $red-500;
   }
   .#{$class}-submit {
     float: left;
-    padding: 8px;
+    padding: 16px;
     width: 100%;
     button[type="submit"] {
-      // @include button-style-black;
       @include font-size-xs;
       @include hover-animation(.25s);
-      background-color: $blue-500;
-      color: $blue-000;
-      box-shadow: 0 0 2px rgb(16 24 32 / .05);
+      background-color: $gray-950;
+      color: $gray-200;
+      // box-shadow: 0 2px 4px rgb(16 24 32 / .25);
       border-radius: 4px;
       cursor: pointer;
       float: left;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: .125em;
       line-height: 24px;
       padding: 16px 16px;
       text-align: center;
@@ -177,15 +181,22 @@ $border-error-color: $red-500;
       width: 100%;
       &:link,
       &:visited {
-        background-color: $blue-500;
-        color: $blue-000;
+        background-color: $gray-950;
+        color: $gray-200;
       }
       &:hover,
       &:active {
-        background-color: $blue-500;
-        color: $blue-000;
+        background-color: $gray-950;
+        color: $gray-000;
       }
     }
+  }
+  .#{$class}-note {
+    @include font-size-xxs;
+    color: $gray-600;
+    float: left;
+    padding: 16px 16px;
+    width: 100%;
   }
 }
 
@@ -193,10 +204,17 @@ $border-error-color: $red-500;
 // -------------------------------------------------------------
 @media #{$mobile} {
   .#{$class} {
+    float: right;
+    margin: 64px 0;
+    padding: 24px 8px 12px;
+    width: 100%;
     .#{$class}-box {
       .#{$class}-row {
       }
       .#{$class}-item {
+        &.#{$class}-item-half {
+          width: 100%;
+        }
       }
     }
   }

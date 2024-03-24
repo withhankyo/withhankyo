@@ -13,9 +13,14 @@ export default function Index() {
   return (
     <Layout>
       <div className="page writer">
-        <h1>Thank you! :)</h1>
+        <h1>Thank you! ツ</h1>
         <p>
-          In today's fast-paced world, managing digital content shouldn’t be a hurdle—it should be a pleasure. That’s the core belief driving hankyō, your new partner in the world of Headless CMS.
+          As things go forward we will keep in the loop until launch day.
+          <br />
+          We are looking forward to having you onboard and enjoy the simplicity of hankyō as we do.
+        </p>
+        <p>
+          Fun fact, &lsquo;hankyō&rsquo; (反響) means &lsquo;echo&rsquo; or &lsquo;resonance&rsquo; in Japanese.
         </p>
       </div>
     </Layout>

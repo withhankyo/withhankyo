@@ -88,12 +88,13 @@ export default function FormComponent() {
   return (
     <form id="form" className="form" onSubmit={onSubmit}>
       <fieldset className="form-box">
+        <legend className="form-legend">Request early access</legend>
         <div className="form-row">
           <div className="form-item form-item-half">
             <label className="form-label required">Name</label>
             <div className="form-field">
               <div className="form-input">
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               {nameError && <p className="form-error">{nameError}</p>}
             </div>
@@ -103,7 +104,7 @@ export default function FormComponent() {
             <label className="form-label required">Last Name</label>
             <div className="form-field">
               <div className="form-input">
-                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
               </div>
               {lastNameError && <p className="form-error">{lastNameError}</p>}
             </div>
@@ -115,7 +116,7 @@ export default function FormComponent() {
             <label className="form-label required">Email</label>
             <div className="form-field">
               <div className="form-input">
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               {emailError && <p className="form-error">{emailError}</p>}
             </div>
@@ -127,14 +128,12 @@ export default function FormComponent() {
             <label className="form-label required">Role</label>
             <div className="form-field">
               <div className="form-select">
-                <select value={occupation} onChange={(e) => setOccupation(e.target.value)} required>
+                <select value={occupation} onChange={(e) => setOccupation(e.target.value)}>
                   <option value="developer">Developer</option>
                   <option value="web designer">Web Designer</option>
-                  <option value="student">Student</option>
                   <option value="founder">Founder</option>
-                  <option value="content creator">Content Creator / Marketer</option>
+                  <option value="student">Student</option>
                   <option value="project manager">Project Manager</option>
-                  <option value="it professional">IT Professional</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -146,34 +145,28 @@ export default function FormComponent() {
           <div className="form-item">
             <div className="form-field">
               <label className="form-checkbox" htmlFor="confirmed">
-                <input id="confirmed" name="confirmed" type="checkbox" checked={confirmed} onChange={(e) => setConfirmed(e.target.checked)} required />
+                <input id="confirmed" name="confirmed" type="checkbox" checked={confirmed} onChange={(e) => setConfirmed(e.target.checked)} />
                 <span className="checkmark"></span>
-                <label htmlFor="confirmed" className="form-checkbox-label">
-                  I agree to receive an email when the product is launched.
-                </label>
+                <span className="label"n>I agree to be in the loop for roadmap updates and to get a front-row seat when hankyō is ready for onboarding!</span>
               </label>
               {confirmedError && <p className="form-error">{confirmedError}</p>}
             </div>
           </div>
         </div>
 
-
-
-
-
-
         <div className="form-footer">
           <div className="form-item">
             <div className="form-submit">
               <button type="submit" disabled={isSubmitting || submitting}>
-                {isSubmitting ? "Submitting..." : "Send your request"}
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </div>
           </div>
         </div>
-
       </fieldset>
+      <p className="form-note" data-nosnippet>
+        We value your privacy and trust above all. The information you provide will solely be used to keep you informed about our roadmap updates and to notify you when hankyō is ready for onboarding. We stand firmly against clutter – your inbox will remain free from unsolicited advertising, and your details will never be sold to third-party partners. Your digital peace is our promise.
+      </p>
     </form>
   );
 }
-
