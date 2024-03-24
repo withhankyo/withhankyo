@@ -20,7 +20,7 @@ export default function FormComponent() {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [occupation, setOccupation] = useState("");
+  const [role, setOccupation] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -67,7 +67,7 @@ export default function FormComponent() {
       try {
         // If validation passes, perform the Botpoison challenge
         const { solution } = await botpoison.challenge();
-        await submit({ name, lastName, email, occupation, confirmed, _botpoison: solution });
+        await submit({ name, lastName, email, role, confirmed, _botpoison: solution });
 
         // Navigate away or reset the form only after successful submission
         setName("");
@@ -90,21 +90,23 @@ export default function FormComponent() {
       <fieldset className="form-box">
         <legend className="form-legend">Request early access</legend>
         <div className="form-row">
+
+
           <div className="form-item">
-            <label className="form-label required">Name</label>
+            <label htmlFor="name" className="form-label required">Name</label>
             <div className="form-field">
               <div className="form-input">
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                <input id="name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               {nameError && <p className="form-error">{nameError}</p>}
             </div>
           </div>
 
           <div className="form-item">
-            <label className="form-label required">Last Name</label>
+            <label htmlFor="last-name" className="form-label required">Last Name</label>
             <div className="form-field">
               <div className="form-input">
-                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                <input id="last-name" name="last-name" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
               </div>
               {lastNameError && <p className="form-error">{lastNameError}</p>}
             </div>
@@ -113,10 +115,10 @@ export default function FormComponent() {
 
         <div className="form-row">
           <div className="form-item">
-            <label className="form-label required">Email</label>
+            <label htmlFor="email" className="form-label required">Email</label>
             <div className="form-field">
               <div className="form-input">
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               {emailError && <p className="form-error">{emailError}</p>}
             </div>
@@ -125,10 +127,10 @@ export default function FormComponent() {
 
         <div className="form-row">
           <div className="form-item">
-            <label className="form-label required">Role</label>
+            <label htmlFor="role" className="form-label required">Role</label>
             <div className="form-field">
               <div className="form-select">
-                <select value={occupation} onChange={(e) => setOccupation(e.target.value)}>
+                <select id="role" name="role" value={role} onChange={(e) => setOccupation(e.target.value)}>
                   <option value="developer">Developer</option>
                   <option value="web designer">Web Designer</option>
                   <option value="founder">Founder</option>

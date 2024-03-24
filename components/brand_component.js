@@ -15,7 +15,7 @@ export default function BrandComponent() {
     <div className="brand">
       <div className="brand-box">
         <div className="brand-item">
-          <Link href="/" className="brand-link" name="home"><BrandIcon /></Link>
+          <Link href="/" className="brand-link" aria-label="Homepage"><BrandIcon /></Link>
         </div>
       </div>
     </div>
