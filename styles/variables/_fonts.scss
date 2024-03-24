@@ -12,16 +12,16 @@
 
 @font-face {
   font-family: "Geist";
-  src: url("/fonts/GeistVariableVF.woff2") format("woff2 supports variations"),
-       url("/fonts/GeistVariableVF.woff2") format("woff2-variations");
+  src: url("../../fonts/GeistVariableVF.woff2") format("woff2 supports variations"),
+       url("../../fonts/GeistVariableVF.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("/fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"),
-       url("/fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
+  src: url("../../fonts/GeistMonoVariableVF.woff2") format("woff2 supports variations"),
+       url("../../fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }

@@ -10,24 +10,23 @@ export default function MetaComponent() {
 
   // Default meta data
   const meta = {
-    title: "Empower Your Projects with Hankyō",
-    description: "Hankyō is a Headless CMS that embraces minimalism and simplicity for an effortless content management and web development experience.",
-    keywords: "headless, content, management, minimal, simple",
+    title: "Empower Your Projects with hankyō",
+    description: "hankyō is a Headless CMS that embraces minimalism and simplicity for an effortless content management and web development experience.",
+    keywords: "headless, content, management, system, cms, minimal, simple",
     url: "https://www.hankyo.co/",
     image: "https://www.hankyo.co/images/opengraph/og.png",
     type: "website",
-    application_name: "Hankyō",
+    application_name: "hankyō",
     twitter: {
       card: "summary_large_image",
       site: "@withhankyo",
-    },
-    fonts: "https://use.typekit.net/sch6dmk.css",
+    }
   };
 
   return (
     <Head>
       {/* Languages */}
-      <link rel="alternate" hrefLang="x-default" href="/" />
+      {/* <link rel="alternate" hrefLang="x-default" href="/" /> */}
 
       {/* SEO */}
       <title>{meta.title}</title>
@@ -51,9 +50,6 @@ export default function MetaComponent() {
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />
-
-      {/* Preloaders */}
-      <link rel="dns-prefetch" href={meta.fonts} />
     </Head>
   );
 }
