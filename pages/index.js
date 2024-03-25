@@ -20,10 +20,10 @@ export default function Index() {
             In today&apos;s fast-paced world, managing digital content shouldn&apos;t be a challenge—it should be enjoyable. This belief underpins <strong>hankyō</strong>, a new player in the Headless CMS arena.
           </p>
           <p>
-            Tailored for micro- to small-scale projects, <strong>hankyō</strong> is designed for those seeking simplicity without compromising their project objectives. Whether you&apos;re a web designer, a startup founder, or a developer, <strong>hankyō</strong> empowers you to achieve more with less.
+            Tailored for micro- to small-scale projects, <strong>hankyō</strong> is designed for those seeking simplicity without compromising their project goals. Whether you&apos;re a web designer, a startup founder, or a developer, <strong>hankyō</strong> empowers you to achieve more with less.
           </p>
           <p>
-            The launch of <strong>hankyō</strong> is scheduled for early summer 2024. Join our waiting list now to receive notification when we go live and secure your early access (invitation only).
+            The launch of <strong>hankyō</strong> is scheduled for early summer 2024. Join our waiting list now to receive notification when we go live and secure your early access.
           </p>
         </div>
       </div>
