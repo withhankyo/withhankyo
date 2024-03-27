@@ -46,6 +46,10 @@ $class: "writer";
     @include font-size-s;
   }
 
+  p.small {
+    @include font-size-xxs;
+  }
+
   ol,
   ul {
     list-style-position: inside;

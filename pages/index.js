@@ -25,6 +25,9 @@ export default function Index() {
           <p>
             The launch of <strong>hankyō</strong> is scheduled for early summer 2024. Join our waiting list now to receive notification when we go live and secure your early access.
           </p>
+          <p className="small">
+            Fun fact, &lsquo;hankyō&rsquo; (反響) means &lsquo;echo&rsquo; or &lsquo;resonance&rsquo; in Japanese.
+          </p>
         </div>
       </div>
       <div className="universal-right">

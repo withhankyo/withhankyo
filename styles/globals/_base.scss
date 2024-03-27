@@ -197,6 +197,7 @@ form {
   }
   select {
     @include autofill;
+    background-color: transparent;
     float: left;
     margin: 0;
     width: 100%;

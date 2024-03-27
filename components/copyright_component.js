@@ -18,7 +18,7 @@ export default function CopyrightComponent() {
     <div className="copyright" data-nosnippet>
       <div className="copyright-box">
         <div className="copyright-item">
-          <p className="font-size-xxs">Hankyō &copy; <span className="year"></span></p>
+          <p className="font-size-xxs">hankyō &copy; <span className="year"></span></p>
         </div>
       </div>
     </div>

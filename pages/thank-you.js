@@ -18,10 +18,7 @@ export default function Index() {
           <p>
             As things go forward we will keep in the loop until launch day.
             <br />
-            We are looking forward to having you onboard and enjoy the simplicity of hankyō as we do.
-          </p>
-          <p>
-            Fun fact, &lsquo;hankyō&rsquo; (反響) means &lsquo;echo&rsquo; or &lsquo;resonance&rsquo; in Japanese.
+            We are looking forward to having you onboard and enjoy the simplicity of <strong>hankyō</strong> as we do.
           </p>
         </div>
       </div>
