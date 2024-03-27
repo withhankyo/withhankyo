@@ -18,14 +18,14 @@ const botpoison = new Botpoison({
 export default function FormComponent() {
   const [submit, submitting] = useFormspark({ formId: FORMSPARK_FORM_ID });
   const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
   const [role, setOccupation] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [nameError, setNameError] = useState("");
-  const [lastNameError, setLastNameError] = useState("");
+  const [surnameError, setSurnameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [confirmedError, setConfirmedError] = useState("");
 
@@ -39,7 +39,7 @@ export default function FormComponent() {
 
     // Clear previous errors
     setNameError("");
-    setLastNameError("");
+    setSurnameError("");
     setEmailError("");
     setConfirmedError("");
 
@@ -49,8 +49,8 @@ export default function FormComponent() {
       setNameError("Please enter your name.");
       isValid = false;
     }
-    if (!lastName.trim()) {
-      setLastNameError("Please enter your last name.");
+    if (!surname.trim()) {
+      setSurnameError("Please enter your surname.");
       isValid = false;
     }
     if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
@@ -67,11 +67,11 @@ export default function FormComponent() {
       try {
         // If validation passes, perform the Botpoison challenge
         const { solution } = await botpoison.challenge();
-        await submit({ name, lastName, email, role, confirmed, _botpoison: solution });
+        await submit({ name, surname, email, role, confirmed, _botpoison: solution });
 
         // Navigate away or reset the form only after successful submission
         setName("");
-        setLastName("");
+        setSurname("");
         setEmail("");
         setOccupation("");
         setConfirmed(false);
@@ -92,7 +92,7 @@ export default function FormComponent() {
         <div className="form-row">
 
 
-          <div className="form-item">
+          <div className="form-item form-item-half">
             <label htmlFor="name" className="form-label required">Name</label>
             <div className="form-field">
               <div className="form-input">
@@ -102,13 +102,13 @@ export default function FormComponent() {
             </div>
           </div>
 
-          <div className="form-item">
-            <label htmlFor="last-name" className="form-label required">Last Name</label>
+          <div className="form-item form-item-half">
+            <label htmlFor="surname" className="form-label required">Surname</label>
             <div className="form-field">
               <div className="form-input">
-                <input id="last-name" name="last-name" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                <input id="surname" name="surname" type="text" value={surname} onChange={(e) => setSurname(e.target.value)} />
               </div>
-              {lastNameError && <p className="form-error">{lastNameError}</p>}
+              {surnameError && <p className="form-error">{surnameError}</p>}
             </div>
           </div>
         </div>

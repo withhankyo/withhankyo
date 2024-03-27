@@ -211,6 +211,9 @@ $class: "form";
       .#{$class}-row {
       }
       .#{$class}-item {
+        &.#{$class}-item-half {
+          width: 100%;
+        }
       }
     }
   }
