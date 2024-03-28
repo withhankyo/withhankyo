@@ -1,2 +1,2 @@
-- 👋 Hi, we are Hankyō
+- 👋 Hi, we are hankyō
 - 🧑🏼‍💻 A Headless CMS crafted with ❤️ – a tool designed to support your upcoming micro and small projects.
