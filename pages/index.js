@@ -23,7 +23,7 @@ export default function Index() {
             Tailored for micro- to small-scale projects, <strong>hankyō</strong> is designed for those seeking simplicity without compromising their project goals. Whether you&apos;re a web designer, a startup founder, or a developer, <strong>hankyō</strong> empowers you to achieve more with less.
           </p>
           <p>
-            The launch of <strong>hankyō</strong> is scheduled for early summer 2024. Join our waiting list now to receive notification when we go live and secure your early access.
+            The launch of <strong>hankyō</strong> is scheduled for early summer 2024. Join our waitlist now to receive notification when we go live and secure your early access.
           </p>
           <p className="small">
             Fun fact, &lsquo;hankyō&rsquo; (反響) means &lsquo;echo&rsquo; or &lsquo;resonance&rsquo; in Japanese.
