@@ -20,7 +20,7 @@ export default function FormComponent() {
   // const [name, setName] = useState("");
   // const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
-  const [role, setOccupation] = useState("");
+  const [role, setOccupation] = useState("developer");
   const [confirmed, setConfirmed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -130,7 +130,7 @@ export default function FormComponent() {
             <div className="form-field">
               <div className="form-select">
                 <select id="role" name="role" value={role} onChange={(e) => setOccupation(e.target.value)}>
-                  <option value="developer">Developer</option>
+                  <option defaultValue="developer">Developer</option>
                   <option value="web designer">Web Designer</option>
                   <option value="founder">Founder</option>
                   <option value="student">Student</option>
