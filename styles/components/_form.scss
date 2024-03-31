@@ -184,14 +184,13 @@ $class: "form";
         background-color: $green-600;
         color: $green-000;
       }
-      &:hover {
+      &:hover,
+      &:active {
         background-color: $green-700;
         color: $green-000;
       }
       &:active {
         box-shadow: 0 2px 4px rgb(38 38 38 / 0);
-        background-color: $green-900;
-        color: $green-000;
       }
     }
   }
