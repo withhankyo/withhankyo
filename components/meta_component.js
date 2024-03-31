@@ -13,8 +13,8 @@ export default function MetaComponent() {
     title: "hankyō | Streamline Digital Content with Our Headless CMS",
     description: "hankyō introduces a new approach to content management that's efficient, user-friendly, and crafted for the digital age. Join our waitlist for early access.",
     keywords: "headless, content, management, system, cms, minimal, simple",
-    url: "https://www.hankyo.co/",
-    image: "https://www.hankyo.co/images/opengraph/og.png",
+    url: "https://www.hankyo.app/",
+    image: "https://www.hankyo.app/images/opengraph/og.png",
     type: "website",
     application_name: "hankyō",
     twitter: {

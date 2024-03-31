@@ -22,7 +22,7 @@ Disallow: /svgs
 Disallow: /svgs/*
 
 # Host
-Host: https://www.hankyo.co
+Host: https://www.hankyo.app
 
 # Sitemaps
-Sitemap: https://www.hankyo.co/sitemap.xml
+Sitemap: https://www.hankyo.app/sitemap.xml

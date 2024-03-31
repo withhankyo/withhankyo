@@ -20,7 +20,7 @@ class MyDocument extends Document {
         <Head>
           <Script
             id="cabin"
-            src="https://cabin.hankyo.co/hello.js"
+            src="https://cabin.hankyo.app/hello.js"
             strategy="beforeInteractive"
           />
         </Head>
