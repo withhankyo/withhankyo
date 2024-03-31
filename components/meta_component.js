@@ -50,6 +50,10 @@ export default function MetaComponent() {
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />
+
+      {/* Theme */}
+      <meta name="theme-color" content="#00C256" />
+      <meta name="msapplication-navbutton-color" content="#00C256" />
     </Head>
   );
 }

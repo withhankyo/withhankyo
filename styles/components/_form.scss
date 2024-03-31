@@ -165,8 +165,8 @@ $class: "form";
       @include font-size-xs;
       @include hover-animation(.25s);
       background-color: $green-600;
-      color: $green-200;
-      // box-shadow: 0 2px 4px rgb(16 24 32 / .25);
+      color: $green-000;
+      box-shadow: 0 2px 4px rgb(38 38 38 / .125);
       border-radius: 4px;
       cursor: pointer;
       float: left;
@@ -182,11 +182,15 @@ $class: "form";
       &:link,
       &:visited {
         background-color: $green-600;
-        color: $green-200;
+        color: $green-000;
       }
-      &:hover,
+      &:hover {
+        background-color: $green-700;
+        color: $green-000;
+      }
       &:active {
-        background-color: $green-600;
+        box-shadow: 0 2px 4px rgb(38 38 38 / 0);
+        background-color: $green-900;
         color: $green-000;
       }
     }
