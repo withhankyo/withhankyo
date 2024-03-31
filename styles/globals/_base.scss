@@ -32,6 +32,7 @@
 }
 
 html {
+  background-color: $green-600;
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
 }
@@ -39,8 +40,6 @@ html {
 html,
 body {
   @include font-size-m;
-  background-color: $gray-000;
-  color: $gray-950;
   font-display: swap;
   font-family: $sans;
   // letter-spacing: .015em;
@@ -53,6 +52,8 @@ body {
 
 body {
   @include clearfix;
+  background-color: $gray-000;
+  color: $gray-950;
   overflow-x: hidden;
   overflow-y: scroll;
 }
