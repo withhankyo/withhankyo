@@ -17,15 +17,15 @@ const botpoison = new Botpoison({
 
 export default function FormComponent() {
   const [submit, submitting] = useFormspark({ formId: FORMSPARK_FORM_ID });
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
+  // const [name, setName] = useState("");
+  // const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
   const [role, setOccupation] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [nameError, setNameError] = useState("");
-  const [surnameError, setSurnameError] = useState("");
+  // const [nameError, setNameError] = useState("");
+  // const [surnameError, setSurnameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [confirmedError, setConfirmedError] = useState("");
 
@@ -38,21 +38,21 @@ export default function FormComponent() {
     setIsSubmitting(true);
 
     // Clear previous errors
-    setNameError("");
-    setSurnameError("");
+    // setNameError("");
+    // setSurnameError("");
     setEmailError("");
     setConfirmedError("");
 
     // Perform local validation
     let isValid = true;
-    if (!name.trim()) {
-      setNameError("Please enter your name.");
-      isValid = false;
-    }
-    if (!surname.trim()) {
-      setSurnameError("Please enter your surname.");
-      isValid = false;
-    }
+    // if (!name.trim()) {
+    //   setNameError("Please enter your name.");
+    //   isValid = false;
+    // }
+    // if (!surname.trim()) {
+    //   setSurnameError("Please enter your surname.");
+    //   isValid = false;
+    // }
     if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
       setEmailError("Please enter a valid email.");
       isValid = false;
@@ -67,11 +67,11 @@ export default function FormComponent() {
       try {
         // If validation passes, perform the Botpoison challenge
         const { solution } = await botpoison.challenge();
-        await submit({ name, surname, email, role, confirmed, _botpoison: solution });
+        await submit({ email, role, confirmed, _botpoison: solution });
 
         // Navigate away or reset the form only after successful submission
-        setName("");
-        setSurname("");
+        // setName("");
+        // setSurname("");
         setEmail("");
         setOccupation("");
         setConfirmed(false);
@@ -88,30 +88,29 @@ export default function FormComponent() {
   return (
     <form id="form" className="form" onSubmit={onSubmit} data-nosnippet>
       <fieldset className="form-box">
-        <legend className="form-legend">Request early access</legend>
-        <div className="form-row">
 
-
-          <div className="form-item form-item-half">
-            <label htmlFor="name" className="form-label required">Name</label>
-            <div className="form-field">
-              <div className="form-input">
-                <input id="name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        {/*
+          <div className="form-row">
+            <div className="form-item form-item-half">
+              <label htmlFor="name" className="form-label required">Name</label>
+              <div className="form-field">
+                <div className="form-input">
+                  <input id="name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                </div>
+                {nameError && <p className="form-error">{nameError}</p>}
               </div>
-              {nameError && <p className="form-error">{nameError}</p>}
+            </div>
+            <div className="form-item form-item-half">
+              <label htmlFor="surname" className="form-label required">Surname</label>
+              <div className="form-field">
+                <div className="form-input">
+                  <input id="surname" name="surname" type="text" value={surname} onChange={(e) => setSurname(e.target.value)} />
+                </div>
+                {surnameError && <p className="form-error">{surnameError}</p>}
+              </div>
             </div>
           </div>
-
-          <div className="form-item form-item-half">
-            <label htmlFor="surname" className="form-label required">Surname</label>
-            <div className="form-field">
-              <div className="form-input">
-                <input id="surname" name="surname" type="text" value={surname} onChange={(e) => setSurname(e.target.value)} />
-              </div>
-              {surnameError && <p className="form-error">{surnameError}</p>}
-            </div>
-          </div>
-        </div>
+        */}
 
         <div className="form-row">
           <div className="form-item">
@@ -149,7 +148,7 @@ export default function FormComponent() {
               <label className="form-checkbox" htmlFor="confirmed">
                 <input id="confirmed" name="confirmed" type="checkbox" checked={confirmed} onChange={(e) => setConfirmed(e.target.checked)} />
                 <span className="checkmark"></span>
-                <span className="label">I agree to be in the loop for roadmap updates and to get a front-row seat when hankyō is ready for onboarding!</span>
+                <span className="label">I'm excited to receive roadmap updates and to be among the first to onboard with hankyō!</span>
               </label>
               {confirmedError && <p className="form-error">{confirmedError}</p>}
             </div>
@@ -160,7 +159,7 @@ export default function FormComponent() {
           <div className="form-item">
             <div className="form-submit">
               <button type="submit" disabled={isSubmitting || submitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
+                {isSubmitting ? "Securing your spot in line..." : "Join our waitlist"}
               </button>
             </div>
           </div>

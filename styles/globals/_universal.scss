@@ -20,36 +20,30 @@ $class: "universal";
     margin: 0 auto;
     padding: 0;
     position: relative;
-    width: 100%;
-  }
-  .#{$class}-left {
-    float: left;
-    padding: 0 32px 0 0;
-    width: 50%;
-  }
-  .#{$class}-right {
-    float: right;
-    padding: 0 0 0 32px;
     width: 50%;
   }
 }
 
-// Media Query 959px
+// Mobile
 // -------------------------------------------------------------
 @media #{$mobile} {
   .#{$class} {
     .#{$class}-box {
-      max-width: 959px;
     }
     .#{$class}-row {
-    }
-    .#{$class}-left {
-      padding: 0;
       width: 100%;
     }
-    .#{$class}-right {
-      padding: 0;
-      width: 100%;
+  }
+}
+
+// Tablet
+// -------------------------------------------------------------
+@media #{$tablet} {
+  .#{$class} {
+    .#{$class}-box {
+    }
+    .#{$class}-row {
+      width: 80%;
     }
   }
 }

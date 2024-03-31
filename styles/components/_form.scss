@@ -7,10 +7,10 @@ $class: "form";
 .#{$class} {
   background-color: $white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(16 24 32 / .05);
+  box-shadow: 0 3px 6px rgb(38 38 38 / .075);
   float: right;
-  margin: 0 0 64px;
-  padding: 48px 32px;
+  margin: 64px 0 32px;
+  padding: 32px;
   width: 100%;
   .#{$class}-box {
     border: none;
@@ -29,7 +29,7 @@ $class: "form";
     }
     .#{$class}-footer {
       float: left;
-      padding: 16px 0 0;
+      padding: 8px 0 0;
       width: 100%;
     }
     .#{$class}-row {
@@ -64,8 +64,8 @@ $class: "form";
       padding: 11px 15px;
       outline: 2px solid $gray-200;
       &:focus {
-        border: 1px solid $blue-500;
-        outline: 2px solid $blue-500;
+        border: 1px solid $blue-600;
+        outline: 2px solid $blue-600;
       }
     }
   }
@@ -81,8 +81,8 @@ $class: "form";
       padding: 11px 15px;
       outline: 2px solid $gray-200;
       &:focus {
-        border: 1px solid $blue-500;
-        outline: 2px solid $blue-500;
+        border: 1px solid $blue-600;
+        outline: 2px solid $blue-600;
       }
     }
   }
@@ -150,7 +150,7 @@ $class: "form";
     font-weight: 600;
     letter-spacing: .015em;
     padding: 4px 16px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     width: 100%;
     &.required::after {
       content: " *";
@@ -159,35 +159,35 @@ $class: "form";
   }
   .#{$class}-submit {
     float: left;
-    padding: 16px;
+    padding: 16px 16px;
     width: 100%;
     button[type="submit"] {
       @include font-size-xs;
       @include hover-animation(.25s);
-      background-color: $gray-950;
-      color: $gray-200;
+      background-color: $green-600;
+      color: $green-200;
       // box-shadow: 0 2px 4px rgb(16 24 32 / .25);
       border-radius: 4px;
       cursor: pointer;
       float: left;
       font-weight: 600;
-      letter-spacing: .125em;
+      letter-spacing: .05em;
       line-height: 24px;
-      padding: 16px 16px;
+      padding: 16px;
       text-align: center;
       text-decoration: none;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       word-break: break-word;
       width: 100%;
       &:link,
       &:visited {
-        background-color: $gray-950;
-        color: $gray-200;
+        background-color: $green-600;
+        color: $green-200;
       }
       &:hover,
       &:active {
-        background-color: $gray-950;
-        color: $gray-000;
+        background-color: $green-600;
+        color: $green-000;
       }
     }
   }
@@ -204,56 +204,6 @@ $class: "form";
 // -------------------------------------------------------------
 @media #{$mobile} {
   .#{$class} {
-    float: right;
-    margin: 64px 0;
-    padding: 24px 8px 12px;
-    .#{$class}-box {
-      .#{$class}-row {
-      }
-      .#{$class}-item {
-        &.#{$class}-item-half {
-          width: 100%;
-        }
-      }
-    }
-  }
-}
-
-// Media Query 960px
-// -------------------------------------------------------------
-@media #{$l} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-row {
-      }
-      .#{$class}-item {
-      }
-    }
-  }
-}
-
-// Media Query 1440px
-// -------------------------------------------------------------
-@media #{$xl} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-row {
-      }
-      .#{$class}-item {
-      }
-    }
-  }
-}
-
-// Media Query 1920px
-// -------------------------------------------------------------
-@media #{$xxl} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-row {
-      }
-      .#{$class}-item {
-      }
-    }
+    padding: 20px 16px 16px;
   }
 }

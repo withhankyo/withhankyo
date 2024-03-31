@@ -48,6 +48,9 @@ $class: "writer";
 
   p.small {
     @include font-size-xxs;
+    strong {
+      color: $gray-950;
+    }
   }
 
   ol,

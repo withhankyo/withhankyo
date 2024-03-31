@@ -5,7 +5,11 @@
 //
 // Breakpoint Width: 959px
 // ------------------------------------------------------------
-$mobile: "(max-width: 959px)" !default;
+$mobile: "(max-width: 559px)" !default;
+
+// Breakpoint Width: 959px
+// ------------------------------------------------------------
+$tablet: "(min-width: 560px) and (max-width: 959px)" !default;
 
 // Artboard Width: 240px
 // ------------------------------------------------------------

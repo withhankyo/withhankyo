@@ -5,14 +5,15 @@
 $class: "statement";
 
 .#{$class} {
-  float: right;
+  float: left;
+  width: 100%;
   .#{$class}-box {
     float: left;
-    padding: 16px 0;
+    padding: 16px 0 4px;
     width: auto;
     .#{$class}-item {
       float: left;
-      padding: 16px 0;
+      padding: 16px 0 0;
     }
   }
 }
@@ -20,12 +21,4 @@ $class: "statement";
 // Mobile
 // -------------------------------------------------------------
 @media #{$mobile} {
-  .#{$class} {
-    .#{$class}-box {
-      padding: 8px 0;
-      .#{$class}-item {
-        padding: 8px 0;
-      }
-    }
-  }
 }

@@ -41,8 +41,8 @@ export default function Primary({ children }) {
       <footer className="universal footer" id="footer">
         <div className="universal-box">
           <div className="universal-row">
-            <CopyrightComponent />
             <StatementComponent />
+            <CopyrightComponent />
           </div>
         </div>
       </footer>
