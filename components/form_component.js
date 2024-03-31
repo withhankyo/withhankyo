@@ -148,7 +148,7 @@ export default function FormComponent() {
               <label className="form-checkbox" htmlFor="confirmed">
                 <input id="confirmed" name="confirmed" type="checkbox" checked={confirmed} onChange={(e) => setConfirmed(e.target.checked)} />
                 <span className="checkmark"></span>
-                <span className="label">I'm excited to receive roadmap updates and to be among the first to onboard with hankyō!</span>
+                <span className="label">I&apos;m excited to receive roadmap updates and to be among the first to onboard with hankyō!</span>
               </label>
               {confirmedError && <p className="form-error">{confirmedError}</p>}
             </div>
