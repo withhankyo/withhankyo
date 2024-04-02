@@ -4,7 +4,8 @@
 // // // // // // // // // // // // //
 
 // Import built-in Next.js components and libraries
-import React, { useEffect } from "react"
+import React from "react"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 // Import custom components
 import FaviconComponent from "../components/favicon_component"
@@ -46,6 +47,7 @@ export default function Primary({ children }) {
           </div>
         </div>
       </footer>
+      <GoogleAnalytics gaId="AW-16510008621" />
     </div>
   )
 }
