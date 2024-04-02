@@ -47,7 +47,7 @@ export default function Primary({ children }) {
           </div>
         </div>
       </footer>
-      <GoogleAnalytics gaId="AW-16510008621" />
+      <GoogleAnalytics gaId="GTM-W7WZRJB2" />
     </div>
   )
 }
