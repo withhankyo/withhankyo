@@ -5,7 +5,7 @@
 
 // Import built-in Next.js components and libraries
 import React from "react"
-import { GoogleAnalytics } from "@next/third-parties/google"
+// import { GoogleAnalytics } from "@next/third-parties/google"
 
 // Import custom components
 import FaviconComponent from "../components/favicon_component"
@@ -47,7 +47,9 @@ export default function Primary({ children }) {
           </div>
         </div>
       </footer>
-      <GoogleAnalytics gaId="GTM-W7WZRJB2" />
+
+      {/* Google Analytics */}
+      {/* <GoogleAnalytics gaId="GTM-W7WZRJB2" /> */}
     </div>
   )
 }
